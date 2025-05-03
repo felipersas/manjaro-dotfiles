@@ -2,3 +2,6 @@
 import = [ "~/.config/alacritty/theme.toml", "~/.config/alacritty/font.toml", "~/.config/alacritty/font-size.toml", "~/.local/share/omakub/defaults/alacritty.toml" ]
 [terminal]
 shell = { program = "/bin/zsh", args = ["--login", "-i"] }
+[window]
+opacity = 0.95
+decorations = "none"
