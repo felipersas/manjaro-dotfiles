@@ -12,6 +12,7 @@ return {
         "tailwindcss-language-server",
         "typescript-language-server",
         "css-lsp",
+        "clangd", -- ✅ Suporte a C/C++
       })
     end,
   },
@@ -24,6 +25,7 @@ return {
       ---@type lspconfig.options
       servers = {
         cssls = {},
+        clangd = {}, -- ✅ Ativa o LSP C++
         tailwindcss = {
           root_dir = function(...)
             return require("lspconfig.util").root_pattern(".git")(...)
@@ -136,6 +138,8 @@ return {
       setup = {},
     },
   },
+
+  -- keymap customizado
   {
     "neovim/nvim-lspconfig",
     opts = function()
@@ -144,7 +148,6 @@ return {
         {
           "gd",
           function()
-            -- DO NOT RESUSE WINDOW
             require("telescope.builtin").lsp_definitions({ reuse_win = false })
           end,
           desc = "Goto Definition",
