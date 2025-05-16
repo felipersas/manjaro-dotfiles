@@ -1,7 +1,7 @@
 [font]
-normal = { family = "IBM Plex Mono", style = "Regular" }
-# normal = { family = "CaskaydiaMono Nerd Font", style = "Regular" }
-bold = { family = "IBM Plex Mono", style = "Bold" }
-# bold = { family = "CaskaydiaMono Nerd Font", style = "Bold" }
-italic = { family = "IBM Plex Mono", style = "Italic" }
-# italic = { family = "CaskaydiaMono Nerd Font", style = "Italic" }
+# normal = { family = "Fira Code", style = "Regular" }
+normal = { family = "CaskaydiaMono Nerd Font", style = "Regular" }
+# bold = { family = "Fira Code", style = "Bold" }
+bold = { family = "CaskaydiaMono Nerd Font", style = "Bold" }
+# italic = { family = "Fira Code", style = "Italic" }
+italic = { family = "CaskaydiaMono Nerd Font", style = "Italic" }

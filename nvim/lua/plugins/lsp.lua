@@ -38,16 +38,20 @@ return {
           single_file_support = false,
           settings = {
             typescript = {
+              tsserver = {
+                maxTsServerMemory = 1024, -- < reduz uso de RAM
+              },
               inlayHints = {
+                includeInlayFunctionParameterTypeHints = true,
                 includeInlayParameterNameHints = "literal",
                 includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-                includeInlayFunctionParameterTypeHints = true,
                 includeInlayVariableTypeHints = false,
                 includeInlayPropertyDeclarationTypeHints = true,
                 includeInlayFunctionLikeReturnTypeHints = true,
                 includeInlayEnumMemberValueHints = true,
               },
             },
+            ["typescript-language-server"] = false,
             javascript = {
               inlayHints = {
                 includeInlayParameterNameHints = "all",
