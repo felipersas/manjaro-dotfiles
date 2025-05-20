@@ -24,6 +24,25 @@ return {
       inlay_hints = { enabled = false },
       ---@type lspconfig.options
       servers = {
+        eslint = {
+          settings = {
+             -- Usa a nova flat-config (eslint.config.mjs)
+            workingDirectory = { mode = "auto" },
+            experimental = {
+              useFlatConfig = true,  -- 🔥 Ativa suporte para flat-config
+            },
+          },
+          -- Só ativa em projetos com ESLint instalado
+          root_dir = require("lspconfig.util").root_pattern(
+            "eslint.config.mjs",
+            "eslint.config.js",
+            ".eslintrc",
+            ".eslintrc.json",
+            ".eslintrc.js",
+            "package.json"
+          ),
+          }
+        },
         cssls = {},
         clangd = {}, -- ✅ Ativa o LSP C++
         tailwindcss = {
